@@ -1,6 +1,6 @@
 ![V4](https://preview.redd.it/xfh9v9yxaqm51.png?width=1920&format=png&auto=webp&s=0b573537b48f6b51b2cb7f415f77faafa36d1553)
 # Custom-Room-Furnished-Spaceroom-V4
-This submod adds a warm and cozy take on the Spaceroom for you and Monika.
+This submod adds a warm and cozy take on the Spaceroom for you and Monika, with a togglable fireplace (and maybe another surprise too).
 
 #### Hi! First of all: thank you for wanting to use my work! It means a lot that I can do something to make people's time with their Monika that much better.
 
@@ -16,6 +16,8 @@ This submod adds a warm and cozy take on the Spaceroom for you and Monika.
    'Doki Doki Literature Club' folder (AKA, the folder where you see 'DDLC.exe').
    
 4. If you have 400+ affection: Launch MAS, and the room will be available. Monika will explain how to use it after a minute or so. If you have less than 400 affection: Launch MAS, and Monika should comment you added it, but you can't use it just yet. Once you reach 400 affection, you can find the room under "Hey, Monika..." > "Location" > "Can we go somewhere else?".
+
+5. To turn the fireplace on or off, go to "Hey, Monika..." > "Location" > "About the fireplace..." and ask her to light it or put it out, depending on its current condition.
 
 And that's it! It's that simple.
 
