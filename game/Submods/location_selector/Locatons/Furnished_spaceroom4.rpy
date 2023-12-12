@@ -22,6 +22,7 @@ init -989 python:
 image V4_o31_deco = ConditionSwitch(
     "mas_current_background.isFltDay()", "mod_assets/location/Spaceroom V4/deco/o31/V4_o31.png",
     "True", "mod_assets/location/Spaceroom V4/deco/o31/V4_o31-n.png"
+)
 
 image V4_d25_deco = ConditionSwitch(
     "mas_current_background.isFltDay()", "mod_assets/location/Spaceroom V4/deco/d25/V4_d25.png",
@@ -34,10 +35,10 @@ image V4_d25_deco = ConditionSwitch(
 #4 gifts gets you part 2
 #5+ gifts get you part 3
 image V4mas_d25_gifts = ConditionSwitch(
-    "len(persistent._mas_d25_gifts_given) == 0", "mod_assets/location/Spaceroom V4/deco/d25/V4gifts_0.png",
-    "0 < len(persistent._mas_d25_gifts_given) < 3", "V4mas_d25_gifts_1",
-    "3 <= len(persistent._mas_d25_gifts_given) <= 4", "V4mas_d25_gifts_2",
-    "True", "V4mas_d25_gifts_3"
+    "len(persistent._mas_d25_gifts_given) == 0", "mod_assets/location/Spaceroom V4/deco/d25/V4_gifts_0.png",
+    "0 < len(persistent._mas_d25_gifts_given) < 3", "V4_mas_d25_gifts_1",
+    "3 <= len(persistent._mas_d25_gifts_given) <= 4", "V4_mas_d25_gifts_2",
+    "True", "V4_mas_d25_gifts_3"
 )
 
 image V4mas_d25_gifts_1 = MASFilterSwitch(
@@ -57,7 +58,7 @@ image V4mas_d25_gifts_3 = MASFilterSwitch(
 
 image V4mas_d25_tree = ConditionSwitch(
     "mas_isNightNow()", ConditionSwitch(
-        "persistent._mas_disable_animations", "mod_assets/location/Spaceroom V4/deco/d25/V4tree_lights_on_1.png",
+        "persistent._mas_disable_animations", "mod_assets/location/Spaceroom V4/deco/d25/V4_tree_lights_on_1.png",
         "not persistent._mas_disable_animations", "V4mas_d25_night_tree_lights_atl"
     ),
     "True", MASFilterSwitch(
@@ -80,19 +81,19 @@ image V4mas_d25_night_tree_lights_atl:
 
 image V4mas_d25_lights = ConditionSwitch(
     "mas_isNightNow()", ConditionSwitch(
-        "persistent._mas_disable_animations", "mod_assets/location/Spaceroom V4/deco/d25/V4lights_on_1.png",
+        "persistent._mas_disable_animations", "mod_assets/location/Spaceroom V4/deco/d25/V4_lights_on_1.png",
         "not persistent._mas_disable_animations", "V4mas_d25_night_lights_atl"
     ),
-    "True", MASFilterSwitch("mod_assets/location/Spaceroom V4/deco/d25/V4lights_off.png")
+    "True", MASFilterSwitch("mod_assets/location/Spaceroom V4/deco/d25/V4_lights_off.png")
 )
 
 image V4mas_d25_night_lights_atl:
     block:
-        "mod_assets/location/Spaceroom V4/deco/d25/V4lights_on_1.png"
+        "mod_assets/location/Spaceroom V4/deco/d25/V4_lights_on_1.png"
         0.5
-        "mod_assets/location/Spaceroom V4/deco/d25/V4lights_on_2.png"
+        "mod_assets/location/Spaceroom V4/deco/d25/V4_lights_on_2.png"
         0.5
-        "mod_assets/location/Spaceroom V4/deco/d25/V4lights_on_3.png"
+        "mod_assets/location/Spaceroom V4/deco/d25/V4_lights_on_3.png"
         0.5
     repeat
 
@@ -308,7 +309,6 @@ init -2 python in mas_background:
         if _new == store.mas_background_def:
             store.pushEvent("return_switch_dlg")
 
-default persitent.v4ft = False
 ###START: Topics
 label Furnished_spaceroom4_switch_dlg:
     python:
