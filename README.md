@@ -17,9 +17,11 @@ This submod adds a warm and cozy take on the Spaceroom for you and Monika, with 
    
 4. If you have 400+ affection: Launch MAS, and the room will be available. Monika will explain how to use it after a minute or so. If you have less than 400 affection: Launch MAS, and Monika should comment you added it, but you can't use it just yet. Once you reach 400 affection, you can find the room under "Hey, Monika..." > "Location" > "Can we go somewhere else?".
 
-5. To turn the fireplace on or off, go to "Hey, Monika..." > "Location" > "About the fireplace..." and ask her to light it or put it out, depending on its current condition.
-
 And that's it! It's that simple.
+
+Fireplace instructions: 
+To turn the fireplace on or off, go to "Hey, Monika..." > "Location" > "About the fireplace..." and ask her to light it or put it out, depending on its current condition.
+
 
 
 ## Other rooms
