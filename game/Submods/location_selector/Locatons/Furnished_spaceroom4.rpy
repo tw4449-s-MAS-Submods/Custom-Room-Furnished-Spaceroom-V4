@@ -339,6 +339,9 @@ label Furnished_spaceroom4_switch_dlg:
         ]))
 
     m 1hua "[switch_quip]"
+    if lit == True:
+            hide lit_fire
+            $ lit = False
     return
 
 label return_switch_dlg:
