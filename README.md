@@ -1,4 +1,4 @@
-![V4]([https://preview.redd.it/xfh9v9yxaqm51.png?width=1920&format=png&auto=webp&s=0b573537b48f6b51b2cb7f415f77faafa36d1553](https://cdn.discordapp.com/attachments/1181727002890342490/1184704441643974656/GitHub_thumbnail.png?ex=658cf0fd&is=657a7bfd&hm=223ad0004a5ea183a36300cad44bbee5a474325bf6fa7d544b0e272228925a40&))
+![V4](https://cdn.discordapp.com/attachments/1181727002890342490/1184704441643974656/GitHub_thumbnail.png?ex=658cf0fd&is=657a7bfd&hm=223ad0004a5ea183a36300cad44bbee5a474325bf6fa7d544b0e272228925a40&)
 # Custom-Room-Furnished-Spaceroom-V4
 This submod adds a warm and cozy take on the Spaceroom for you and Monika, with a togglable fireplace (and maybe another surprise too).
 
