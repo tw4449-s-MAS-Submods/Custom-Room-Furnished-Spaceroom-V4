@@ -99,12 +99,17 @@ image V4mas_d25_night_lights_atl:
 
 
 init 501 python:
-
     MASImageTagDecoDefinition.register_img(
         "mas_o31_wall_bats",
-        submod_background_Den.background_id,
+        submod_background_Furnished_spaceroom4.background_id,
         MASAdvancedDecoFrame(zorder=6),
         replace_tag="V4_o31_deco"
+    )
+
+    MASImageTagDecoDefinition.register_img(
+        "mas_o31_vignette",
+        submod_background_Furnished_spaceroom4.background_id,
+        MASAdvancedDecoFrame(zorder=21) #21 to be in front of all cgs
     )
 
     MASImageTagDecoDefinition.register_img(
@@ -281,6 +286,12 @@ init -2 python in mas_background:
             if not store.mas_inEVL("Furnished_spaceroom4_switch_dlg"):
                 store.pushEvent("Furnished_spaceroom4_switch_dlg")
 
+            if not store.mas_inEVL("V4_room_installed"):
+                if not renpy.seen_label("V4_room_installed"):
+                    store.pushEvent("V4_room_installed")
+                
+
+
         store.monika_chr.tablechair.table = "v4"
         store.monika_chr.tablechair.chair = "v4"
 
@@ -289,7 +300,6 @@ init -2 python in mas_background:
 
         store.mas_unlockEVL("monika_change_fire", "EVE") #unlock fire toggle
 
-        store.mas_unlockEVL("V4_room_installed", "EVE")
 
         
 
@@ -300,7 +310,6 @@ init -2 python in mas_background:
         #Lock islands greet to be sure -- and fire toggle
         store.mas_lockEVL("mas_monika_islands", "EVE")
         store.mas_lockEVL("monika_change_fire", "EVE")
-        store.mas_lockEVL("V4_room_installed", "EVE")
 
         #COMMENT(#) IF NOT NEEDED
         store.monika_chr.tablechair.table = "def"
@@ -310,6 +319,17 @@ init -2 python in mas_background:
             store.pushEvent("return_switch_dlg")
 
 ###START: Topics
+label V4_room_installed:
+        m 1suo "Oh my gosh..."
+        m 2wub "This room is so cozy!"
+        m 3hub "I love it! Thank you, [player]!"
+        m 1wub "And it has a fireplace too?"
+        m 1hua "I can't wait to try it out!"
+        m 3eub "If you want to use it, go to 'Locations' and 'About the fireplace...' and I can light it or put it out from there."
+        m 1hua "Why don't we try it out now?~"
+        m 1eka "Thanks for adding this room for me, [player]. I love you so much~"
+        return
+
 label Furnished_spaceroom4_switch_dlg:
     python:
         switch_quip = renpy.substitute(renpy.random.choice([
@@ -319,7 +339,6 @@ label Furnished_spaceroom4_switch_dlg:
         ]))
 
     m 1hua "[switch_quip]"
-
     return
 
 label return_switch_dlg:
@@ -585,25 +604,5 @@ label monika_change_fire:
 
 
 
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="V4_room_installed",
-            conditional="True",
-            action=EV_ACT_QUEUE,
-            aff_range=(mas_aff.ENAMORED, None)
-        )
-    )
 
-label V4_room_installed:
-    if renpy.seen_label("bg_room_installed"):
-        m 1suo "Oh my gosh..."
-        m 2wub "This room is so cozy!"
-        m 3hub "I love it! Thank you, [player]!"
-        m 1wub "And it has a fireplace too?"
-        m 1hua "I can't wait to try it out!"
-        m 3eub "If you want to use it, go to 'Locations' and 'About the fireplace...' and I can light it or put it out from there."
-        m 1hua "Why don't we try it out now?~"
-        m 1eka "Thanks for adding this room for me, [player]. I love you so much~"
-    return "no_unlock"
+
