@@ -152,10 +152,10 @@ init -1 python:
                 pref = "../screenshot00" + str(files) + ".png"
         elif files < 1000:
             if renpy.loadable("../screenshot0" + str(files) + ".png"):
-                pref = "../screenshot00" + str(files) + ".png"
+                pref = "../screenshot0" + str(files) + ".png"
         else:
             if renpy.loadable("../screenshot" + str(files) + ".png"):
-                pref = "../screenshot00" + str(files) + ".png"
+                pref = "../screenshot" + str(files) + ".png"
 
     submod_background_Furnished_spaceroom4 = MASFilterableBackground(
         # ID
@@ -573,7 +573,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="monika_change_fire",
             category=["location"],
-            prompt="About the fireplace",
+            prompt="About the fireplace...",
             pool=True,
             unlocked=False,
             rules={"no_unlock": None},
@@ -587,12 +587,12 @@ label monika_change_fire:
 
     menu:
         "Can you light the fireplace?" if lit == False:
-            m 6hua "Alright"
+            m 6hua "Sure!"
             if lit == False:
                 show lit_fire zorder 6
                 $ lit = True
         "Can you put out the fire?" if lit == True:
-            m 6hua "Alright"
+            m 6hua "Sure!"
             if lit == True:
                 hide lit_fire
                 $ lit = False
