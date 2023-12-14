@@ -604,8 +604,3 @@ label monika_change_fire:
             m 1eua "Oh, Okay."
 
     return
-
-
-
-
-
