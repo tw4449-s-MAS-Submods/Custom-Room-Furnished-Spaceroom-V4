@@ -153,9 +153,12 @@ init -1 python:
         elif files < 1000:
             if renpy.loadable("../screenshot0" + str(files) + ".png"):
                 pref = "../screenshot0" + str(files) + ".png"
-        else:
+        elif files < 9999:
             if renpy.loadable("../screenshot" + str(files) + ".png"):
                 pref = "../screenshot" + str(files) + ".png"
+        else:
+            if pref == None:
+                pref = "mod_assets/location/Spaceroom V4/0.png"
 
     submod_background_Furnished_spaceroom4 = MASFilterableBackground(
         # ID
@@ -604,3 +607,8 @@ label monika_change_fire:
             m 1eua "Oh, Okay."
 
     return
+
+
+
+
+
