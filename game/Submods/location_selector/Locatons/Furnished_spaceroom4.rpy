@@ -3,8 +3,8 @@ init -990 python:
     store.mas_submod_utils.Submod(
         author="tw4449 Cdino112 multimokia d3adpan Booplicate RobTTM",
         name="Custom Room Furnished Spaceroom V4",
-        description="This submod adds a homey take on the Spaceroom for you and Monika.",
-        version="1.0"
+        description="This submod adds a cozy take on the Spaceroom for you and Monika.",
+        version="1.0.1"
     )
 
 # Register the updater
