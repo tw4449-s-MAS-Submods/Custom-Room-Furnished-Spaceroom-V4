@@ -4,7 +4,7 @@ init -990 python:
         author="tw4449 Cdino112 multimokia d3adpan Booplicate RobTTM",
         name="Custom Room Furnished Spaceroom V4",
         description="This submod adds a cozy take on the Spaceroom for you and Monika.",
-        version="1.0.2.1"
+        version="1.0.2.2"
     )
 
 # Register the updater
