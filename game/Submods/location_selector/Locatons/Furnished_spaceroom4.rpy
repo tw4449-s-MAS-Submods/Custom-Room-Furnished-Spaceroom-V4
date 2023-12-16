@@ -4,7 +4,7 @@ init -990 python:
         author="tw4449 Cdino112 multimokia d3adpan Booplicate RobTTM",
         name="Custom Room Furnished Spaceroom V4",
         description="This submod adds a cozy take on the Spaceroom for you and Monika.",
-        version="1.0.3"
+        version="1.0.3.1"
     )
 
 # Register the updater
@@ -41,15 +41,15 @@ image V4mas_d25_gifts = ConditionSwitch(
     "True", "V4_gifts_3"
 )
 
-image V4mas_d25_gifts_1 = MASFilterSwitch(
+image V4_gifts_1 = MASFilterSwitch(
     "mod_assets/location/Spaceroom V4/deco/d25/V4_gifts_1.png"
 )
 
-image V4mas_d25_gifts_2 = MASFilterSwitch(
+image V4_gifts_2 = MASFilterSwitch(
     "mod_assets/location/Spaceroom V4/deco/d25/V4_gifts_2.png"
 )
 
-image V4mas_d25_gifts_3 = MASFilterSwitch(
+image V4_gifts_3 = MASFilterSwitch(
     "mod_assets/location/Spaceroom V4/deco/d25/V4_gifts_3.png"
 )
 
