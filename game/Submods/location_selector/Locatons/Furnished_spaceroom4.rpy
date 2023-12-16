@@ -36,9 +36,9 @@ image V4_d25_deco = ConditionSwitch(
 #5+ gifts get you part 3
 image V4mas_d25_gifts = ConditionSwitch(
     "len(persistent._mas_d25_gifts_given) == 0", "mod_assets/location/Spaceroom V4/deco/d25/V4_gifts_0.png",
-    "0 < len(persistent._mas_d25_gifts_given) < 3", "V4_mas_d25_gifts_1",
-    "3 <= len(persistent._mas_d25_gifts_given) <= 4", "V4_mas_d25_gifts_2",
-    "True", "V4_mas_d25_gifts_3"
+    "0 < len(persistent._mas_d25_gifts_given) < 3", "V4_gifts_1",
+    "3 <= len(persistent._mas_d25_gifts_given) <= 4", "V4_gifts_2",
+    "True", "V4_gifts_3"
 )
 
 image V4mas_d25_gifts_1 = MASFilterSwitch(
